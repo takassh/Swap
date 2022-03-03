@@ -1,4 +1,11 @@
 module.exports = {
+  settings: {
+    node: {
+      allowModules: ["electron"],
+      resolvePaths: [__dirname],
+      tryExtensions: [".js", ".json", ".node", ".ts", ".d.ts"],
+    },
+  },
   env: {
     browser: false,
     es2021: true,

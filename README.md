@@ -16,3 +16,9 @@
 # ERC20 BSC test token address
 - WBNB 0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd
 - DAI 0x8a9424745056Eb399FD19a0EC26A14316684e274
+
+# set up
+- [typechain on hardhat](https://www.npmjs.com/package/@typechain/hardhat)
+
+# Deploy
+- `npx hardhat run scripts/*.ts --network ropsten`
