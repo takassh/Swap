@@ -17,10 +17,6 @@ contract V2Swap {
         
     // This example swaps DAI/WETH9 for single path swaps and DAI/USDC/WETH9 for multi path swaps.
 
-    // ropsten
-    // address public immutable DAI = 0xaD6D458402F60fD3Bd25163575031ACDce07538D;
-    // address public immutable WETH9 = 0xc778417E063141139Fce010982780140Aa0cD5Ab;
-
     address public immutable DAI;
     address public immutable WETH9;
 

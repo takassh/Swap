@@ -13,15 +13,9 @@ contract V3Swap {
     // It should be noted that for the sake of these examples, we purposefully pass in the swap router instead of inherit the swap router for simplicity.
     // More advanced example contracts will detail how to inherit the swap router safely.
 
-    // uniswap
-    // ISwapRouter public immutable swapRouter = ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564);
     ISwapRouter public immutable swapRouter;
 
     // This example swaps DAI/WETH9 for single path swaps and DAI/USDC/WETH9 for multi path swaps.
-
-    // ropsten
-    // address public constant DAI = 0xaD6D458402F60fD3Bd25163575031ACDce07538D;
-    // address public constant WETH9 = 0xc778417E063141139Fce010982780140Aa0cD5Ab;
     
     address public immutable DAI;
     address public immutable WETH9;

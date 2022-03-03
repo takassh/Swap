@@ -27,7 +27,11 @@ const config: HardhatUserConfig = {
   defaultNetwork: "ropsten",
   networks: {
     ropsten: {
-      url: process.env.SERVER_URL,
+      url: process.env.ROPSTEN_SERVER_URL,
+      accounts: [process.env.PRIVATE_KEY ?? ""],
+    },
+    bscTestnet: {
+      url: process.env.BSC_TEST_SERVER_URL,
       accounts: [process.env.PRIVATE_KEY ?? ""],
     },
   },
