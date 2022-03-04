@@ -29,6 +29,7 @@ const config: HardhatUserConfig = {
     ropsten: {
       url: process.env.ROPSTEN_SERVER_URL,
       accounts: [process.env.PRIVATE_KEY ?? ""],
+      gasPrice: 10000000000,
     },
     bscTestnet: {
       url: process.env.BSC_TEST_SERVER_URL,

@@ -7,6 +7,16 @@ import { V2Swap } from "../typechain/V2Swap";
 dotenv.config();
 
 async function v2Swap() {
+  console.log("start to deploy");
+
+  const Swap = await ethers.getContractFactory("V2Swap");
+  const sushiSwapRouter = "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506";
+  const swap = await Swap.deploy(sushiSwapRouter);
+
+  await swap.deployed();
+
+  console.log("Swap deployed to:", swap.address);
+
   console.log("start");
 
   // Connect to the network
@@ -14,10 +24,9 @@ async function v2Swap() {
     process.env.ROPSTEN_SERVER_URL ?? ""
   );
   const wallet = new ethers.Wallet(process.env.PRIVATE_KEY ?? "", provider);
-  const swapContractAddress = "0xB8f012e650488967f0fFa088642e5CB3667c77d8";
 
   const contract = new ethers.Contract(
-    swapContractAddress,
+    swap.address,
     V2SwapArtifact.abi,
     wallet
   ) as V2Swap;
